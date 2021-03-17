@@ -10,7 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaeb0202-47ea-4dd2-bd68-8ab2bce1724d" name="Default Changelist" comment="" />
+    <list default="true" id="aaeb0202-47ea-4dd2-bd68-8ab2bce1724d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useWindowSize.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/categories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tags.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +89,7 @@
       <workItem from="1615860517064" duration="8292000" />
       <workItem from="1615950660698" duration="7998000" />
       <workItem from="1615968554294" duration="748000" />
+      <workItem from="1615970138800" duration="1016000" />
     </task>
     <servers />
   </component>
@@ -104,34 +113,43 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="612" y="369" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1615826791628" />
-    <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615232902971">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="3009" y="420" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615970724699">
+      <screen x="1792" y="23" width="3440" height="1417" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1615232902971" />
+    <state x="3009" y="420" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615970724699" />
+    <state x="3612" y="123" width="1520" height="1217" key="DiffContextDialog" timestamp="1615970837479">
+      <screen x="1792" y="23" width="3440" height="1417" />
+    </state>
+    <state x="3612" y="123" width="1520" height="1217" key="DiffContextDialog/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615970837479" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1615228817509">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1615228817509" />
+    <state x="4188" y="436" key="VCS.ChangeListViewerDialog" timestamp="1615970823357">
+      <screen x="1792" y="23" width="3440" height="1417" />
+    </state>
+    <state x="4188" y="436" key="VCS.ChangeListViewerDialog/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615970823357" />
     <state x="515" y="177" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1615483684182">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="515" y="177" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1615483684182" />
-    <state x="2938" y="422" width="1281" height="701" key="find.popup" timestamp="1615968577581">
+    <state x="2938" y="422" width="1281" height="701" key="find.popup" timestamp="1615971137335">
       <screen x="1792" y="23" width="3440" height="1417" />
     </state>
     <state x="597" y="315" width="667" height="554" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1615836466985" />
-    <state x="2938" y="422" width="1281" height="701" key="find.popup/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615968577581" />
-    <state x="2869" y="358" key="run.anything.popup" timestamp="1615861610688">
+    <state x="2938" y="422" width="1281" height="701" key="find.popup/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615971137335" />
+    <state x="2869" y="358" key="run.anything.popup" timestamp="1615971150071">
       <screen x="1792" y="23" width="3440" height="1417" />
     </state>
     <state x="561" y="265" key="run.anything.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1615216091948" />
-    <state x="2869" y="358" key="run.anything.popup/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615861610688" />
-    <state x="2869" y="341" width="1287" height="856" key="search.everywhere.popup" timestamp="1615968581483">
+    <state x="2869" y="358" key="run.anything.popup/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615971150071" />
+    <state x="2869" y="341" width="1287" height="856" key="search.everywhere.popup" timestamp="1615970984390">
       <screen x="1792" y="23" width="3440" height="1417" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1615835713070" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1615233024940" />
-    <state x="2869" y="341" width="1287" height="856" key="search.everywhere.popup/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615968581483" />
+    <state x="2869" y="341" width="1287" height="856" key="search.everywhere.popup/1792.23.3440.1417/0.23.1792.1031@1792.23.3440.1417" timestamp="1615970984390" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

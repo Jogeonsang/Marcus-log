@@ -8,7 +8,13 @@ import * as colors from '../../styles/colors'
 import icon from '../../images/icon.svg'
 
 const Header = () => {
-  const pathname = window.location.pathname;
+  let pathname;
+
+  // SSR window error
+  if (typeof window !== 'undefined') {
+    pathname = window.location.pathname;
+  }
+
 
   return (
     <HeaderContainer border={pathname !== '/' && '1px' }>

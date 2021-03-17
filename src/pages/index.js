@@ -5,13 +5,11 @@ import { Link, graphql } from "gatsby"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Post from "../components/Post"
-import { useWindowSize } from "../hooks/useWindowSize"
 import CH from "../images/CC.png"
 import Projects from "../components/Projects"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-  const width = useWindowSize().width
 
   return (
     <Wrapper>
