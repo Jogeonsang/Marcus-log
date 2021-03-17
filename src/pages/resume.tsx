@@ -298,7 +298,7 @@ const WorkTitle = styled.p`
   font-weight: bold;
 `;
 
-const WorkDesc = styled.p`
+const WorkDesc = styled.div`
   font-size: 16px;
   word-break: keep-all;
   margin-bottom: 15px;

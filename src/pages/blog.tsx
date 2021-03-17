@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import CH from "../images/CC.png"
 import Post from "../components/Post"
-const Posts = () => {
+const Blog = () => {
   const data = useStaticQuery(graphql`
     {
     allMarkdownRemark(
@@ -64,7 +64,7 @@ const Posts = () => {
   )
 };
 
-export default Posts
+export default Blog
 
 const PostsWrapper = styled.div`
   background-color: #141B23;
