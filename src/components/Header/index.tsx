@@ -23,8 +23,8 @@ const Header = () => {
           <Home href={"/"}>
             <img src={icon} alt="icon"/>
           </Home>
-          <Text href={"/blog"} isActive={pathname === '/blog'}>Blog</Text>
-          <Text href={"/resume"} isActive={pathname === '/resume'}>Resume</Text>
+          <Text href={"/blog"} isActive={pathname === '/blog/'}>Blog</Text>
+          <Text href={"/resume"} isActive={pathname === '/resume/'}>Resume</Text>
         </LeftComponent>
         <RightComponent>
           <Icon>
@@ -97,6 +97,7 @@ const Text = styled.a<{isActive: boolean}>`
   font-weight: 400;
   font-size: 16px;
   cursor:pointer;
+  text-decoration: none;
   
   ${({ isActive }) => isActive && css`
       text-decoration: white wavy underline;

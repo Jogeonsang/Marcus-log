@@ -14,7 +14,8 @@ interface Props {
 const Post:React.FC<Props> = (props) => {
   const {title, description, tags, image, slug} = props;
   return (
-    <PostContainer href={slug}>
+    <PostContainer>
+      <PostOverlay to={slug}/>
       <PostWrapper>
         <Header>
           <ImageBox>
@@ -41,7 +42,8 @@ const Post:React.FC<Props> = (props) => {
 
 export default Post
 
-const PostContainer = styled.a`
+const PostContainer = styled.div`
+  position: relative;
   width: 100%;
   transition: all .2s;
   border-radius: 6px;
@@ -62,6 +64,15 @@ const PostContainer = styled.a`
     padding-left: 10px;
     padding-right: 10px;
   }
+`;
+
+const PostOverlay = styled(Link)`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 `;
 
 const PostWrapper = styled.div`
