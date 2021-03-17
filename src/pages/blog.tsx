@@ -23,8 +23,8 @@ const Blog = () => {
           title
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 800) {
-                ...GatsbyImageSharpFluid
+              fixed {
+            ...GatsbyImageSharpFixed
               }
             }
           }
@@ -54,7 +54,7 @@ const Blog = () => {
           {posts.map((post, index) => {
               return <Post key={post.id} description={post.frontmatter.description} tags={post.frontmatter.tags}
                            title={post.frontmatter.title}
-                           image={post.frontmatter.featuredImage.childImageSharp.fluid.src} slug={post.fields.slug}/>
+                           image={post.frontmatter.featuredImage.childImageSharp.fixed.src} slug={post.fields.slug}/>
             }
           )}
         </PostSection>

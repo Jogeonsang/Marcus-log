@@ -25,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <span> • </span><span>조건상</span></p>
         </TitleWrapper>
         <Thumbnail>
-          <Image src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src}/>
+          <Image src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fixed.src}/>
         </Thumbnail>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -116,9 +116,9 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 630) {
-              ...GatsbyImageSharpFluid
-            }
+            fixed {
+            ...GatsbyImageSharpFixed
+          }
           }
         }
       }
