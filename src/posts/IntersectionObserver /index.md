@@ -71,4 +71,4 @@ http://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/
 https://medium.com/better-programming/image-lazy-loading-in-react-intersection-observer-a9ae912ddafe
 
 ----
-write by Marcus
+written by Marcus

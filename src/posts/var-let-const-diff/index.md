@@ -121,3 +121,6 @@ console.log(result);    // result : result is not defined
 
 #### 호이스팅
 호이스팅은 https://velog.io/@marcus/Javascript-Hoisting 해당 사이트 참고 바람
+
+---
+written by Marcus

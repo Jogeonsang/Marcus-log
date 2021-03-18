@@ -171,4 +171,4 @@ export default Products;
 
 ----
 
-write by Marcus
+written by Marcus

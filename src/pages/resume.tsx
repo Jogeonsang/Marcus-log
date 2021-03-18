@@ -200,7 +200,7 @@ const Resume = () => (
         <SkillTitle>Javascript / Typescript</SkillTitle>
         <SkillDesc>
           <li>ES2015 이후의 Javascript 문법에 익숙합니다.</li>
-          <li>타입스크릅트를 프로젝트에 적용하고 프로젝트 구조를 만들 수 있습니다.</li>
+          <li>타입스크립트 프로젝트에 적용하고 프로젝트 구조를 만들 수 있습니다.</li>
           <li>Promise, Async Await을 사용하여 비동기 작업을 할 수 있습니다.</li>
         </SkillDesc>
         <SkillTitle>React</SkillTitle>
@@ -228,15 +228,24 @@ const ResumeContainer = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  margin-left: 300px;
-  max-width: 700px;
-  margin-top: 10.5rem;
+  margin: 0;
+  padding: 20px;
+  
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
+    margin-left: 300px;
+    margin-top: 10.5rem;
+  }
 `;
 const Title = styled.h2`
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
   color: whitesmoke;
-  margin-bottom: 6.5rem;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 6.5rem;
+  }
 `;
 
 const Job = styled.h2`
@@ -309,6 +318,8 @@ const WorkDescList = styled.ul`
 `;
 const WorkStackWrapper = styled.div`
   padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const WorkStack = styled.span`
@@ -320,4 +331,5 @@ const WorkStack = styled.span`
   color: #E35656 !important;
   padding: 6px !important;
   margin-right: 8px;
+  margin-bottom: 5px;
 `;

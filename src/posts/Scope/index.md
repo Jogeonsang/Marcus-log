@@ -85,3 +85,6 @@ console.log(hello) // Error, hello is not defined
 제가 소개해드릴 내용은 여기가 끝입니다.
 스코프에 대한 내용에 틀린점이 있거나 내용이 도움이 됬다면 댓글로 공유해주세요!
 자바스크립트를 공부하는 사람끼리 서로 좋은 공부가 될거같습니다:D
+
+---
+written by Marcus
