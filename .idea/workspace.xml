@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/resume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/resume.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/posts/IntersectionObserver /index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/IntersectionObserver /index.md" afterDir="false" />
@@ -94,7 +95,7 @@
       <workItem from="1615860517064" duration="8292000" />
       <workItem from="1615950660698" duration="7998000" />
       <workItem from="1615968554294" duration="748000" />
-      <workItem from="1615970138800" duration="14198000" />
+      <workItem from="1615970138800" duration="14541000" />
     </task>
     <servers />
   </component>
