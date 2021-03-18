@@ -7,13 +7,11 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import defaultImg from "../images/default.svg"
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-  deckDeckGoHighlightElement()
   return (
     <TemplateWrapper>
       <Header/>
@@ -47,6 +45,11 @@ const TemplateWrapper = styled.div`
 `
 
 const Content = styled.div`
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+    width: 100%;
+  }
   width: calc(980px - (30px * 2));
   margin: 0 auto;
   

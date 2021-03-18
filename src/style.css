@@ -160,11 +160,15 @@ p {
   --x-height-multiplier: 0.35;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
-}
-img {
-  max-width: 1080px !important;
-}
 
+
+}
+p > img {
+  width: 100%;
+  max-width: 1080px !important;
+
+  height: auto;
+}
 button {
   outline: none;
   cursor: pointer;
@@ -324,6 +328,14 @@ a:focus {
 .gatsby-highlight pre {
   border-radius: 8px;
 }
+
+
+@media screen and (max-width: 768px) {
+  .gatsby-highlight pre > code {
+    font-size: 0.75rem;
+  }
+}
+
 
 .gatsby-highlight :after {
 
