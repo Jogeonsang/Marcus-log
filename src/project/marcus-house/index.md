@@ -10,7 +10,7 @@ MARCUS HOUSE 프로젝트는 Intersection Observer API를 공부하면서 만들
 
 해당 프로젝트에서는 3가지 기능을 집중적으로 구현했습니다
 
-- Lazy Loading
+- Lazy Loading**
 - Infinity Scroll
 - Skeleton UI
 

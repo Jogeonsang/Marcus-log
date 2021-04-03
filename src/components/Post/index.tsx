@@ -136,10 +136,15 @@ const Title = styled.span`
 const Text = styled.span`
   display: block;
   font-size: 13.5px;
-  line-height: 1.6;
   color: #717174;
   word-break: break-word;
   padding-top: 6px;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  line-height: 20px;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
 `;
 
 const Tag = styled.span`
