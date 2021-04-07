@@ -11,12 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaeb0202-47ea-4dd2-bd68-8ab2bce1724d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/posts/InfiniteScroll/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/React-Typescript-Pattern/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/posts/Hoisting/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/Hoisting/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/marcus-house/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/marcus-house/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,7 @@
       <workItem from="1616380931077" duration="3561000" />
       <workItem from="1617095594682" duration="314000" />
       <workItem from="1617156281071" duration="506000" />
-      <workItem from="1617165517811" duration="7042000" />
+      <workItem from="1617165517811" duration="9097000" />
     </task>
     <servers />
   </component>
