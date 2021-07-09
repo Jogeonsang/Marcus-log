@@ -11,7 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaeb0202-47ea-4dd2-bd68-8ab2bce1724d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/posts/React-Typescript-Pattern/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/Wematch-DesignSystem/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/Wematch-DesignSystem/thumbnail.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +71,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/posts/Wematch-DesignSystem" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -89,6 +95,7 @@
       <workItem from="1617095594682" duration="314000" />
       <workItem from="1617156281071" duration="506000" />
       <workItem from="1617165517811" duration="9097000" />
+      <workItem from="1625795813812" duration="3950000" />
     </task>
     <servers />
   </component>
