@@ -7,63 +7,76 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import defaultImg from "../images/default.svg"
+import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+
+  console.log(data.markdownRemark.frontmatter)
   return (
-    <TemplateWrapper>
+    <TemplateContainer>
       <Header/>
+      <TemplateWrapper>
       <Content>
         <TitleWrapper>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>
-            <time>{post.frontmatter.date}</time>
-            <span> • </span><span>조건상</span></p>
+          <hr/>
         </TitleWrapper>
         <Thumbnail>
-          <Image src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fixed.src}/>
+          <img src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src}/>
+          {/* <Img fixed={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src} alt={"data.blogPost.author"} /> */}
         </Thumbnail>
-        <section
+        <Section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr/>
       </Content>
       <Footer/>
-    </TemplateWrapper>
+      </TemplateWrapper>
+    </TemplateContainer>
   )
 }
-
+{/* <p>
+    <time>{post.frontmatter.date}</time>
+    <span> • </span><span>조건상</span></p> */}
 export default BlogPostTemplate
 
-const TemplateWrapper = styled.div`
+const TemplateContainer = styled.div`
   width: 100%;
   overflow: auto;
   background: #141B23;
 `
 
+const TemplateWrapper = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+`;
 const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 20px;
     width: 100%;
   }
-  width: calc(980px - (30px * 2));
-  margin: 0 auto;
   
   section {
     color: whitesmoke;
     
-    h1 {
+    p {
       
     }
     
-    h2 {
-      
+    h2, h3 {
+      font-size: 30px; 
+      display: block;
+      font-weight: bold;
     }
     
+    a {
+      color: rgb(81, 92, 230);
+    }
     
   }
 `
@@ -72,12 +85,16 @@ const TitleWrapper = styled.header`
   margin: 60px 0 30px;
   
   h1 {
-    font-size: 2em;
+    font-size: 38px;
     line-height: 1.5;
     color: whitesmoke;
     font-weight: 900;
   }
   
+  hr {
+    border-top: 1px solid rgb(229, 229, 229);
+    margin: 50px 0px;
+  }
   p {
     font-size: 15.75px;
     color: #f8f9fa;
@@ -90,14 +107,9 @@ const Thumbnail = styled.div`
   overflow: hidden;
 `
 
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  max-height: 483px;
-`
+const Section = styled.section`
+  padding: 30px 0;  
+`;
 export const pageQuery = graphql`
   query BlogPostBySlug(
     $id: String!
@@ -118,11 +130,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         featuredImage {
-          childImageSharp {
-            fixed {
-            ...GatsbyImageSharpFixed
-          }
-          }
+          childImageSharp {            fluid(maxWidth: 800) {              ...GatsbyImageSharpFluid            }          }
+        
         }
       }
     }

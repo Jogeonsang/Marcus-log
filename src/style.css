@@ -97,9 +97,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-6);
-  line-height: var(--lineHeight-tight);
+  line-height: var(--lineHeight-normal);
   letter-spacing: -0.025em;
 }
 
@@ -149,7 +149,7 @@ h4 > a,
 h5 > a,
 h6 > a {
   text-decoration: none;
-  color: inherit;
+  color: rgb(81, 92, 230);
 }
 
 /* Prose */
