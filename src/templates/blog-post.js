@@ -2,19 +2,17 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
-import Layout from "../components/layout"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
-import defaultImg from "../images/default.svg"
-import Img from "gatsby-image"
+import profileImg from '../images/profile.jpg';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  
 
-  console.log(data.markdownRemark.frontmatter)
   return (
     <TemplateContainer>
       <Header/>
@@ -34,6 +32,19 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr/>
       </Content>
+      <Profile>
+        <img src={profileImg}/>
+        <div>
+          <div>
+            <span style={{fontWeight: 700}}>조건상</span>
+            <span style={{margin: '0 10px', border: '0 solid #e5e7eb'}}>|</span>
+            <span>Frontend Developer</span>
+          </div>
+          <div>
+            <a href="https://github.com/Jogeonsang" target="_blank" >GitHub</a>
+          </div>
+        </div>
+      </Profile>
       <Footer/>
       </TemplateWrapper>
     </TemplateContainer>
@@ -75,7 +86,7 @@ const Content = styled.div`
     }
     
     a {
-      color: rgb(81, 92, 230);
+      color: #9fa8da;
     }
     
   }
@@ -92,8 +103,9 @@ const TitleWrapper = styled.header`
   }
   
   hr {
-    border-top: 1px solid rgb(229, 229, 229);
-    margin: 50px 0px;
+    border-top: 0.5px solid hsla(0,0%,100%,.3);
+    margin-bottom:50px;
+    height: 0px;
   }
   p {
     font-size: 15.75px;
@@ -109,6 +121,51 @@ const Thumbnail = styled.div`
 
 const Section = styled.section`
   padding: 30px 0;  
+  font-size: 18px;
+  ul {
+    margin-left: 1.3rem;
+  }
+`;
+
+const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  div {
+    padding-left: 20px;
+    font-size: 1.3rem;
+    line-height : 1.75rem;
+    
+    span {
+      position: relative;
+
+      &::nth-child(1) {
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 6px;
+          background: #ff0a78;
+          position: absolute;
+          bottom: 3px;
+          left: 0;
+          opacity: .5;
+        }
+      }
+    }
+
+    a {
+      color: #9fa8da;
+      font-size: .875rem;
+      text-decoration: none;
+    }
+  }
 `;
 export const pageQuery = graphql`
   query BlogPostBySlug(

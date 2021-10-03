@@ -8,6 +8,7 @@ import { HiMenuAlt3 } from "@react-icons/all-files/hi/HiMenuAlt3";
 import * as colors from '../../styles/colors'
 import {fadeIn} from "../../styles/animation"
 import icon from '../../images/icon.svg'
+import logo from '../../images/logo/Marcus_logo_full_dark.svg'
 import { useState } from "react"
 
 const Header = () => {
@@ -27,10 +28,10 @@ const Header = () => {
       <HeaderWrapper>
         <LeftComponent>
           <Home href={"/"}>
-            <img src={icon} alt="icon"/>
+            <img src={logo} alt="icon"/>
           </Home>
-          <Text href={"/blog"} isActive={pathname === '/blog/'}>블로그</Text>
-          <Text href={"/resume"} isActive={pathname === '/resume/'}>이력서</Text>
+          {/* <Text href={"/blog"} isActive={pathname === '/blog/'}>Blog</Text>
+          <Text href={"/resume"} isActive={pathname === '/resume/'}>About</Text> */}
         </LeftComponent>
         <RightComponent>
           <BtnMenu onClick={() => setIsOpenMenu(!isOpenMenu)}>
@@ -111,8 +112,8 @@ const Home = styled.a`
   cursor:pointer;
   
   img {
-    width: 60px; 
-    height: 60px;
+    width: 100px; 
+    height: 100px;
   }
   
   @media screen and (max-width: 767px) {

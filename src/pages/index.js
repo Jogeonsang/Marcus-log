@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
             )}
           </PostSection>
         </PostWrapper>
-        <Projects/>
+        {/* <Projects/> */}
       </Content>
       <Footer/>
     </Wrapper>
@@ -41,6 +41,7 @@ export default BlogIndex
 const Wrapper = styled.div`
   background-color: #141B23;
   width: 100%;
+  min-height: 100vh;
   overflow: auto;
 `
 

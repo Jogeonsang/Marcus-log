@@ -2,7 +2,7 @@ import * as React from "react"
 import {Link} from 'gatsby'
 import styled from "styled-components"
 import defaultImg from '../../images/default.svg';
-import writerIcon from '../../images/writer.png';
+import writerIcon from '../../images/favicon.svg';
 
 interface Props {
   title: string;

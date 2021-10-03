@@ -33,6 +33,8 @@ const Projects = () => {
   }
   `)
   const posts = data.allMarkdownRemark.nodes;
+
+  console.log(posts)
   return (
     <PostWrapper>
       <PostTitle>Proejct</PostTitle>
