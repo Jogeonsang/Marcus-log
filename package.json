@@ -23,7 +23,6 @@
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-plugin-styled-components": "^4.1.0",
-    "gatsby-remark-component-images": "0.0.6",
     "gatsby-remark-copy-linked-files": "^3.0.0",
     "gatsby-remark-embed-video": "^3.1.1",
     "gatsby-remark-highlight-code": "^2.2.0",
