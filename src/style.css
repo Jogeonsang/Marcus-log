@@ -29,10 +29,11 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "Apple SD Gothic Neo",Roboto,Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Wotfard",Futura,-apple-system,sans-serif;
+  --fontFamily-sans: "Apple SD Gothic Neo", Roboto, Montserrat, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --fontFamily-serif: "Wotfard", Futura, -apple-system, sans-serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -73,7 +74,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo';
+  font-family: Helvetica, "맑은 고딕", "malgun gothic", "Apple SD Gothic Neo";
   font-size: var(--fontSize-1);
   color: whitesmoke;
 }
@@ -97,9 +98,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-6);
-  line-height: var(--lineHeight-tight);
+  line-height: var(--lineHeight-normal);
   letter-spacing: -0.025em;
 }
 
@@ -149,7 +150,7 @@ h4 > a,
 h5 > a,
 h6 > a {
   text-decoration: none;
-  color: inherit;
+  color: rgb(81, 92, 230);
 }
 
 /* Prose */
@@ -160,8 +161,6 @@ p {
   --x-height-multiplier: 0.35;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
-
-
 }
 p > img {
   width: 100%;
@@ -327,8 +326,14 @@ a:focus {
 
 .gatsby-highlight pre {
   border-radius: 8px;
+  background: #282a36 !important;
 }
 
+.gatsby-highlight pre > code {
+  font-size: 13px;
+  background: none;
+  box-shadow: none;
+}
 
 @media screen and (max-width: 768px) {
   .gatsby-highlight pre > code {
@@ -336,9 +341,7 @@ a:focus {
   }
 }
 
-
 .gatsby-highlight :after {
-
 }
 
 .gatsby-highlight-code-line {
@@ -350,7 +353,7 @@ a:focus {
 }
 
 .language-text {
-  color: #E35656 !important;
+  color: #e35656 !important;
   padding: 6px !important;
 }
 /* Media queries */

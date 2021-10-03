@@ -2,68 +2,92 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
-import Layout from "../components/layout"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
-import defaultImg from "../images/default.svg"
+import profileImg from '../images/profile.jpg';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  
+
   return (
-    <TemplateWrapper>
+    <TemplateContainer>
       <Header/>
+      <TemplateWrapper>
       <Content>
         <TitleWrapper>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>
-            <time>{post.frontmatter.date}</time>
-            <span> • </span><span>조건상</span></p>
+          <hr/>
         </TitleWrapper>
         <Thumbnail>
-          <Image src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fixed.src}/>
+          <img src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src}/>
+          {/* <Img fixed={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src} alt={"data.blogPost.author"} /> */}
         </Thumbnail>
-        <section
+        <Section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr/>
       </Content>
+      <Profile>
+        <img src={profileImg}/>
+        <div>
+          <div>
+            <span style={{fontWeight: 700}}>조건상</span>
+            <span style={{margin: '0 10px', border: '0 solid #e5e7eb'}}>|</span>
+            <span>Frontend Developer</span>
+          </div>
+          <div>
+            <a href="https://github.com/Jogeonsang" target="_blank" >GitHub</a>
+          </div>
+        </div>
+      </Profile>
       <Footer/>
-    </TemplateWrapper>
+      </TemplateWrapper>
+    </TemplateContainer>
   )
 }
-
+{/* <p>
+    <time>{post.frontmatter.date}</time>
+    <span> • </span><span>조건상</span></p> */}
 export default BlogPostTemplate
 
-const TemplateWrapper = styled.div`
+const TemplateContainer = styled.div`
   width: 100%;
   overflow: auto;
   background: #141B23;
 `
 
+const TemplateWrapper = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+`;
 const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 20px;
     width: 100%;
   }
-  width: calc(980px - (30px * 2));
-  margin: 0 auto;
   
   section {
     color: whitesmoke;
     
-    h1 {
+    p {
       
     }
     
-    h2 {
-      
+    h2, h3 {
+      font-size: 30px; 
+      display: block;
+      font-weight: bold;
     }
     
+    a {
+      color: #9fa8da;
+    }
     
   }
 `
@@ -72,12 +96,17 @@ const TitleWrapper = styled.header`
   margin: 60px 0 30px;
   
   h1 {
-    font-size: 2em;
+    font-size: 38px;
     line-height: 1.5;
     color: whitesmoke;
     font-weight: 900;
   }
   
+  hr {
+    border-top: 0.5px solid hsla(0,0%,100%,.3);
+    margin-bottom:50px;
+    height: 0px;
+  }
   p {
     font-size: 15.75px;
     color: #f8f9fa;
@@ -90,14 +119,54 @@ const Thumbnail = styled.div`
   overflow: hidden;
 `
 
+const Section = styled.section`
+  padding: 30px 0;  
+  font-size: 18px;
+  ul {
+    margin-left: 1.3rem;
+  }
+`;
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  max-height: 483px;
-`
+const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  div {
+    padding-left: 20px;
+    font-size: 1.3rem;
+    line-height : 1.75rem;
+    
+    span {
+      position: relative;
+
+      &::nth-child(1) {
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 6px;
+          background: #ff0a78;
+          position: absolute;
+          bottom: 3px;
+          left: 0;
+          opacity: .5;
+        }
+      }
+    }
+
+    a {
+      color: #9fa8da;
+      font-size: .875rem;
+      text-decoration: none;
+    }
+  }
+`;
 export const pageQuery = graphql`
   query BlogPostBySlug(
     $id: String!
@@ -118,11 +187,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         featuredImage {
-          childImageSharp {
-            fixed {
-            ...GatsbyImageSharpFixed
-          }
-          }
+          childImageSharp {            fluid(maxWidth: 800) {              ...GatsbyImageSharpFluid            }          }
+        
         }
       }
     }
