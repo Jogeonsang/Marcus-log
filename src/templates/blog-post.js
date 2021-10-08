@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import profileImg from '../images/profile.jpg';
+import moment from 'moment';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -21,6 +22,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <TitleWrapper>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <hr/>
+          <div>마지막 업데이트  { moment(post.frontmatter.date).format('YYYY.MM.DD')}</div>
         </TitleWrapper>
         <Thumbnail>
           <img src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src}/>
@@ -89,6 +91,9 @@ const Content = styled.div`
       color: #9fa8da;
     }
     
+    ol {
+        margin-left: 1.3rem;
+    }
   }
 `
 
@@ -104,12 +109,18 @@ const TitleWrapper = styled.header`
   
   hr {
     border-top: 0.5px solid hsla(0,0%,100%,.3);
-    margin-bottom:50px;
     height: 0px;
+    margin-bottom: 24px;
   }
   p {
     font-size: 15.75px;
     color: #f8f9fa;
+  }
+
+  div {
+    color: #aaa;
+    text-align: right;
+    margin-bottom:50px;
   }
 `
 
