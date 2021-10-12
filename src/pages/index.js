@@ -19,14 +19,11 @@ const BlogIndex = ({ data, location }) => {
         <PostWrapper>
           <PostTitle>recent post</PostTitle>
           <PostSection>
-            {posts.map((post, index) => {
-                if (index < 4) {
-                  return <Post key={post.id} description={post.frontmatter.description} tags={post.frontmatter.tags}
-                               title={post.frontmatter.title}
-                               image={post.frontmatter.featuredImage.childImageSharp.fixed.src} slug={post.fields.slug}/>
-                }
-              }
-            )}
+            {posts.map((post, index) => (
+              <Post key={post.id} description={post.frontmatter.description} tags={post.frontmatter.tags}
+              title={post.frontmatter.title}
+              image={post.frontmatter.featuredImage.childImageSharp.fixed.src} slug={post.fields.slug}/>
+            ))}
           </PostSection>
         </PostWrapper>
         {/* <Projects/> */}
@@ -61,10 +58,28 @@ const PostWrapper = styled.section`
 
 const PostTitle = styled.h2`
   font-size: 16px;
-  color: #ff0a78;
+  color: #e44643;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transform: 0.15s;
+  padding-left: 10px;
+
+  animation: pulse;
+  @keyframes pulse {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.25;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
+  }
 `
 
 const PostSection = styled.div`
@@ -72,7 +87,7 @@ const PostSection = styled.div`
   flex-wrap: wrap;
   box-sizing: border-box;
  
-  padding-top: 20px;
+  padding: 15px 0;
 `
 
 const ProjectWrapper = styled.div`

@@ -162,7 +162,7 @@ const Profile = styled.div`
           content: "";
           width: 100%;
           height: 6px;
-          background: #ff0a78;
+          background: #e44643;
           position: absolute;
           bottom: 3px;
           left: 0;

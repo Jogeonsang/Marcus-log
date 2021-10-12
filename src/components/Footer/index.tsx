@@ -31,5 +31,6 @@ const Copyright = styled.span`
   bottom: 0;
   margin-bottom: 20px;
   font-size: 12px;
+  padding: 0 12px;
   color: #A7A9AA;
 `;

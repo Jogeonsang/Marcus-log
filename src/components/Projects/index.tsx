@@ -58,7 +58,7 @@ const PostWrapper = styled.section`
 
 const PostTitle = styled.h2`
 font-size: 16px;
-color: #ff0a78;
+color: #e44643;
 font-weight: 600;
 text-transform: uppercase;
 letter-spacing: 2px;

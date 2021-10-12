@@ -84,8 +84,8 @@ const HeaderWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
   background-color: #141B23;;
   
   border-bottom: ${props => props.border && `${props.border} solid #24272b;`};
@@ -105,15 +105,14 @@ const RightComponent = styled.div`
 `;
 const Home = styled.a`
   display: flex;
-  padding: 10px;
   text-decoration: none;
   color: ${colors.pointBlue};
     
   cursor:pointer;
   
   img {
-    width: 100px; 
-    height: 100px;
+    width: 130px; 
+    height: 130px;
   }
   
   @media screen and (max-width: 767px) {

@@ -7,7 +7,7 @@ import writerIcon from '../../images/favicon.svg';
 interface Props {
   title: string;
   description?: string | null;
-  tags: [string] | string;
+  tags: [string];
   image: string;
   slug: string;
 }
@@ -26,7 +26,9 @@ const Post:React.FC<Props> = (props) => {
           <Desc>
             <Title>{title}</Title>
             <Text>{description}</Text>
-            <Tag>{tags}</Tag>
+            <Tags>{tags.map((tag) => (
+              <Tag>#{tag}</Tag>
+            ))}</Tags>
           </Desc>
         </Header>
         <Footer>
@@ -45,13 +47,18 @@ export default Post
 const PostContainer = styled.div`
   position: relative;
   width: 100%;
-  transition: all .2s;
   border-radius: 6px;
   text-decoration: none;
   box-sizing: border-box;
   margin-bottom: 20px;
+  box-shadow: 0 6px 25px rgba(24,25,31,.05);
   
-  
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
   @media (min-width:768px) {
     max-width: 33%;
     flex: 0 0 33%;
@@ -73,6 +80,7 @@ const PostOverlay = styled(Link)`
     right: 0;
     bottom: 0;
     z-index: 1;
+    
 `;
 
 const PostWrapper = styled.div`
@@ -147,7 +155,7 @@ const Text = styled.span`
   -webkit-line-clamp: 3;
 `;
 
-const Tag = styled.span`
+const Tags = styled.div`
   font-size: 12px;
   position: absolute;
   bottom: 16px;
@@ -156,6 +164,10 @@ const Tag = styled.span`
   line-height: 1.1;
   color: #717174;
   white-space: normal;
+`;
+
+const Tag = styled.span`
+  margin-right: 10px;
 `;
 
 const Footer = styled.footer`
@@ -182,6 +194,7 @@ const WriterBox = styled.div`
     width: 22px;
     height: 22px;
     object-fit: cover;
+    background-color:#202429;
   }
   
   a {
