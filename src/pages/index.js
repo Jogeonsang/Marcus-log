@@ -7,12 +7,35 @@ import Footer from "../components/Footer"
 import Post from "../components/Post"
 import Intro from '../components/Intro'
 import Projects from "../components/Projects"
+import { Helmet } from "react-helmet"
+import ogImage from '../images/og-image.png'
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-
+  
   return (
     <Wrapper>
+      <Helmet 
+        title={"Marcus Log"}
+        meta={[
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            property: `og:image`,
+            content: ogImage,
+          },
+          {
+            property: `og:title`,
+            content: `Marcus Log`,
+          },
+          {
+            property: `og:description`,
+            content: `배우고 경험한걸 정리하고 공유하는 공간입니다.`,
+          },
+        ]}
+      />
       <Header/>
       <Intro/>
       <Content>
