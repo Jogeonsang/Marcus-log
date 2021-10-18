@@ -12,10 +12,11 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-  
+
 
   return (
     <TemplateContainer>
+      <SEO title={`Marcus Log - ${post.frontmatter.title}`} ogImage={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src} description={post.frontmatter.description}/>
       <Header/>
       <TemplateWrapper>
       <Content>
@@ -26,7 +27,6 @@ const BlogPostTemplate = ({ data, location }) => {
         </TitleWrapper>
         <Thumbnail>
           <img src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src}/>
-          {/* <Img fixed={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src} alt={"data.blogPost.author"} /> */}
         </Thumbnail>
         <Section
           dangerouslySetInnerHTML={{ __html: post.html }}
