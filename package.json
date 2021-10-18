@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "marcus-log",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "marcus log",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Marcus",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -22,6 +22,7 @@
     "gatsby-plugin-offline": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-plugin-sitemap": "^4.10.0",
     "gatsby-plugin-styled-components": "^4.1.0",
     "gatsby-remark-copy-linked-files": "^3.0.0",
     "gatsby-remark-embed-video": "^3.1.1",

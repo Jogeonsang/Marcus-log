@@ -2,17 +2,15 @@ module.exports = {
   siteMetadata: {
     title: `Marcus log`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Marcus`,
+      summary: `Frontend Developer Marcus.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `개인적으로 공부한 내용들을 정리하는 블로그입니다.`,
+    siteUrl: `https://www.marcus-log.dev`,
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
