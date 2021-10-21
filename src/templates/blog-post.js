@@ -89,6 +89,13 @@ const Content = styled.div`
     
     a {
       color: #9fa8da;
+      text-decoration: none;
+
+      &:hover {
+        --tw-shadow: 0 2px 0 #9fa8da;;
+        box-shadow: 0 0 transparent,0 0 transparent,var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+      }
     }
     
     ol {
