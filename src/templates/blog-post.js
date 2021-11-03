@@ -15,6 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
 
   return (
+    <>
     <TemplateContainer>
       <SEO title={`Marcus Log - ${post.frontmatter.title}`} ogImage={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src} description={post.frontmatter.description}/>
       <Header/>
@@ -50,6 +51,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <Footer/>
       </TemplateWrapper>
     </TemplateContainer>
+    </>
   )
 }
 {/* <p>
@@ -81,12 +83,20 @@ const Content = styled.div`
       
     }
     
-    h2, h3 {
+    h3 {
+      font-size: 22px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
       font-size: 30px; 
       display: block;
       font-weight: bold;
     }
     
+    hr {
+      border-top: 0.5px solid hsla(0,0%,100%,.3)
+    }
     a {
       color: #9fa8da;
       text-decoration: none;
@@ -142,6 +152,11 @@ const Section = styled.section`
   font-size: 18px;
   ul {
     margin-left: 1.3rem;
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin-top: 13px;
+    margin-bottom: 13px;
   }
 `;
 
