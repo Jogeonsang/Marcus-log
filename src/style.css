@@ -1,5 +1,5 @@
 /* CSS Custom Properties Definitions */
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 :root {
   box-sizing: border-box;
@@ -31,9 +31,9 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
 
-  --fontFamily-sans: Pretendard, "Apple SD Gothic Neo", Roboto, Montserrat, system-ui,
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial,
-    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  --fontFamily-sans: Pretendard, "Apple SD Gothic Neo", Roboto, Montserrat,
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --fontFamily-serif: "Wotfard", Futura, -apple-system, sans-serif;
   --font-body: var(--fontFamily-serif);
@@ -359,6 +359,14 @@ a:focus {
 .gatsby-highlight :after {
 }
 
+.deckgo-highlight-code-carbon {
+  font-size: 13px;
+  box-shadow: none;
+}
+
+.deckgo-highlight-code-container > .token.keyword {
+  color: black !important;
+}
 .gatsby-highlight-code-line {
   background-color: #fdf6e3;
   border-radius: 0.3em;
