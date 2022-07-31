@@ -224,7 +224,6 @@ const Resume = () => (
 export default Resume
 
 const ResumeContainer = styled.div`
-  background-color: #141B23;
 `;
 
 const InnerWrapper = styled.div`

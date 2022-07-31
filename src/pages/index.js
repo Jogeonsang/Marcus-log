@@ -5,17 +5,17 @@ import { Link, graphql } from "gatsby"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Post from "../components/Post"
-import Intro from '../components/Intro'
+import Intro from "../components/Intro"
 import Projects from "../components/Projects"
 import { Helmet } from "react-helmet"
-import ogImage from '../images/og-image.png'
+import ogImage from "../images/og-image.png"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-  
+
   return (
     <Wrapper>
-      <Helmet 
+      <Helmet
         title={"Marcus Log"}
         meta={[
           {
@@ -36,22 +36,27 @@ const BlogIndex = ({ data, location }) => {
           },
         ]}
       />
-      <Header/>
-      <Intro/>
+      <Header />
+      <Intro />
       <Content>
         <PostWrapper>
           <PostTitle>recent post</PostTitle>
           <PostSection>
             {posts.map((post, index) => (
-              <Post key={post.id} description={post.frontmatter.description} tags={post.frontmatter.tags}
-              title={post.frontmatter.title}
-              image={post.frontmatter.featuredImage.childImageSharp.fixed.src} slug={post.fields.slug}/>
+              <Post
+                key={post.id}
+                description={post.frontmatter.description}
+                tags={post.frontmatter.tags}
+                title={post.frontmatter.title}
+                image={post.frontmatter.featuredImage.childImageSharp.fixed.src}
+                slug={post.fields.slug}
+              />
             ))}
           </PostSection>
         </PostWrapper>
         {/* <Projects/> */}
       </Content>
-      <Footer/>
+      <Footer />
     </Wrapper>
   )
 }
@@ -59,7 +64,6 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 const Wrapper = styled.div`
-  background-color: #141B23;
   width: 100%;
   min-height: 100vh;
   overflow: auto;
@@ -75,9 +79,7 @@ const Content = styled.main`
   margin: auto;
 `
 
-const PostWrapper = styled.section`
-  
-`
+const PostWrapper = styled.section``
 
 const PostTitle = styled.h2`
   font-size: 16px;
@@ -91,16 +93,16 @@ const PostTitle = styled.h2`
   animation: pulse;
   @keyframes pulse {
     from {
-        transform : scale(1);
-        opacity   : 1;
+      transform: scale(1);
+      opacity: 1;
     }
     50% {
-        transform : scale(0.75);
-        opacity   : 0.25;
+      transform: scale(0.75);
+      opacity: 0.25;
     }
     to {
-        transform : scale(1);
-        opacity   : 1;
+      transform: scale(1);
+      opacity: 1;
     }
   }
 `
@@ -109,18 +111,16 @@ const PostSection = styled.div`
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
- 
+
   padding: 15px 0;
 `
 
-const ProjectWrapper = styled.div`
-  
-`
+const ProjectWrapper = styled.div``
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      sort: {order: DESC, fields: frontmatter___date}
-      filter: {fileAbsolutePath: {regex: "/posts/"}}
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
     ) {
       nodes {
         fields {

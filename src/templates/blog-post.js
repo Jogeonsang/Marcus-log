@@ -5,127 +5,145 @@ import styled from "styled-components"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
-import profileImg from '../images/profile.jpg';
-import moment from 'moment';
+import profileImg from "../images/profile.jpg"
+import moment from "moment"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
-
   return (
     <>
-    <TemplateContainer>
-      <SEO title={`Marcus Log - ${post.frontmatter.title}`} ogImage={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src} description={post.frontmatter.description}/>
-      <Header/>
-      <TemplateWrapper>
-      <Content>
-        <TitleWrapper>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <hr/>
-          <div>마지막 업데이트  { moment(post.frontmatter.date).format('YYYY.MM.DD')}</div>
-        </TitleWrapper>
-        <Thumbnail>
-          <img src={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src}/>
-        </Thumbnail>
-        <Section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
+      <TemplateContainer>
+        <SEO
+          title={`Marcus Log - ${post.frontmatter.title}`}
+          ogImage={
+            data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid
+              .src
+          }
+          description={post.frontmatter.description}
         />
-        <hr/>
-      </Content>
-      <Profile>
-        <img src={profileImg}/>
-        <div>
-          <div>
-            <span style={{fontWeight: 700}}>조건상</span>
-            <span style={{margin: '0 10px', border: '0 solid #e5e7eb'}}>|</span>
-            <span>Frontend Developer</span>
-          </div>
-          <div>
-            <a href="https://github.com/Jogeonsang" target="_blank" >GitHub</a>
-          </div>
-        </div>
-      </Profile>
-      <Footer/>
-      </TemplateWrapper>
-    </TemplateContainer>
+        <Header />
+        <TemplateWrapper>
+          <Content>
+            <TitleWrapper>
+              <h1 itemProp="headline">{post.frontmatter.title}</h1>
+              <hr />
+              <div>
+                마지막 업데이트{" "}
+                {moment(post.frontmatter.date).format("YYYY.MM.DD")}
+              </div>
+            </TitleWrapper>
+            <Thumbnail>
+              <img
+                src={
+                  data.markdownRemark.frontmatter.featuredImage.childImageSharp
+                    .fluid.src
+                }
+              />
+            </Thumbnail>
+            <Section
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+            />
+            <hr />
+          </Content>
+          <Profile>
+            <img src={profileImg} />
+            <div>
+              <div>
+                <span style={{ fontWeight: 700 }}>조건상</span>
+                <span style={{ margin: "0 10px", border: "0 solid #e5e7eb" }}>
+                  |
+                </span>
+                <span>Frontend Developer</span>
+              </div>
+              <div>
+                <a href="https://github.com/Jogeonsang" target="_blank">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </Profile>
+          <Footer />
+        </TemplateWrapper>
+      </TemplateContainer>
     </>
   )
 }
-{/* <p>
+{
+  /* <p>
     <time>{post.frontmatter.date}</time>
-    <span> • </span><span>조건상</span></p> */}
+    <span> • </span><span>조건상</span></p> */
+}
 export default BlogPostTemplate
 
 const TemplateContainer = styled.div`
   width: 100%;
   overflow: auto;
-  background: #141B23;
 `
 
 const TemplateWrapper = styled.div`
   max-width: 800px;
   margin: 0 auto;
-`;
+`
 const Content = styled.div`
-
   @media screen and (max-width: 768px) {
     padding: 20px;
     width: 100%;
   }
-  
+
   section {
     color: whitesmoke;
-    
+
     p {
-      
     }
-    
+
     h3 {
       font-size: 22px;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
     h2 {
-      font-size: 30px; 
+      font-size: 30px;
       display: block;
       font-weight: bold;
     }
-    
+
     hr {
-      border-top: 0.5px solid hsla(0,0%,100%,.3)
+      border-top: 0.5px solid hsla(0, 0%, 100%, 0.3);
     }
     a {
       color: #9fa8da;
       text-decoration: none;
 
       &:hover {
-        --tw-shadow: 0 2px 0 #9fa8da;;
-        box-shadow: 0 0 transparent,0 0 transparent,var(--tw-shadow);
-        box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+        --tw-shadow: 0 2px 0 #9fa8da;
+        box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+          var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
       }
     }
-    
+
     ol {
-        margin-left: 1.3rem;
+      margin-left: 1.3rem;
     }
   }
 `
 
 const TitleWrapper = styled.header`
   margin: 60px 0 30px;
-  
+
   h1 {
     font-size: 38px;
     line-height: 1.5;
     color: whitesmoke;
     font-weight: 900;
   }
-  
+
   hr {
-    border-top: 0.5px solid hsla(0,0%,100%,.3);
+    border-top: 0.5px solid hsla(0, 0%, 100%, 0.3);
     height: 0px;
     margin-bottom: 24px;
   }
@@ -137,7 +155,7 @@ const TitleWrapper = styled.header`
   div {
     color: #aaa;
     text-align: right;
-    margin-bottom:50px;
+    margin-bottom: 50px;
   }
 `
 
@@ -148,7 +166,7 @@ const Thumbnail = styled.div`
 `
 
 const Section = styled.section`
-  padding: 30px 0;  
+  padding: 30px 0;
   font-size: 18px;
   ul {
     margin-left: 1.3rem;
@@ -158,7 +176,7 @@ const Section = styled.section`
     margin-top: 13px;
     margin-bottom: 13px;
   }
-`;
+`
 
 const Profile = styled.div`
   display: flex;
@@ -173,13 +191,12 @@ const Profile = styled.div`
   div {
     padding-left: 20px;
     font-size: 1.3rem;
-    line-height : 1.75rem;
-    
+    line-height: 1.75rem;
+
     span {
       position: relative;
 
       &::nth-child(1) {
-
         &::after {
           content: "";
           width: 100%;
@@ -188,18 +205,18 @@ const Profile = styled.div`
           position: absolute;
           bottom: 3px;
           left: 0;
-          opacity: .5;
+          opacity: 0.5;
         }
       }
     }
 
     a {
       color: #9fa8da;
-      font-size: .875rem;
+      font-size: 0.875rem;
       text-decoration: none;
     }
   }
-`;
+`
 export const pageQuery = graphql`
   query BlogPostBySlug(
     $id: String!
@@ -220,8 +237,11 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         featuredImage {
-          childImageSharp {            fluid(maxWidth: 800) {              ...GatsbyImageSharpFluid            }          }
-        
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
