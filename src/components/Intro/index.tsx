@@ -1,6 +1,5 @@
 import * as React from "react"
-import styled from 'styled-components';
-import CH from "../../images/CC.png"
+import styled from "styled-components"
 
 const Index = () => {
 
